@@ -127,6 +127,9 @@ nav ul li a:hover {
     align-items: center;
     padding: 60px 50px;
     background: var(--primary-white);
+    align-items: center;
+    flex-wrap: wrap; /* allows wrapping */
+    gap: 1rem;
 }
 
 .hero-text h1 {
@@ -165,11 +168,16 @@ nav ul li a:hover {
     height: 32px;
 }
 
+.hero-img {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+
 .hero-img img {
-    max-width: max-content;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
 }
 
 /* --------------------
@@ -510,6 +518,27 @@ nav ul li a:hover {
 
     .project-link {
         margin: 0 auto;        /* center button on mobile */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;   /* stack img and text */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-img {
+        order: -1; /* show image ABOVE text */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.2rem;
     }
 }
 
