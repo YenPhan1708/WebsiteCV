@@ -60,6 +60,11 @@ body {
     line-height: 1.6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 /* --------------------
   Navbar
 -----------------------*/
@@ -601,52 +606,6 @@ nav ul li a:hover {
 
 .scrum-gallery img:hover {
     transform: scale(1.05);
-}
-/* --------------------
-  Contact Section
------------------------*/
-#contact {
-    background: var(--dark-blue);
-    color: var(--primary-white);
-    padding: 60px 30px;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-#contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#contact input,
-#contact textarea {
-    width: 80%;
-    max-width: 500px;
-    padding: 12px;
-    margin: 10px 0;
-    border: 2px solid var(--primary-neutral);
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-#contact button {
-    background: var(--accent-green);
-    color: var(--primary-white);
-    border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#contact button:hover {
-    background: var(--accent-blue);
 }
 
 /* --------------------
