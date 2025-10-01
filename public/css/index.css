@@ -168,6 +168,26 @@ nav ul li a:hover {
     width: 32px;
     height: 32px;
 }
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(32px, 4vw, 48px);
+    height: clamp(32px, 4vw, 48px);
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a img {
+    width: 70%;   /* keep inside the circle */
+    height: 70%;
+    object-fit: contain;
+}
+
+.social-links a:hover {
+    background: var(--primary-white);
+    transform: scale(1.1);
+}
 
 
 /* --------------------

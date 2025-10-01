@@ -8,11 +8,6 @@ document.querySelectorAll("nav a").forEach(anchor => {
     });
 });
 
-// Contact form
-document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Message sent! (Hook up backend later)");
-});
 
 // Video play/pause on click
 document.querySelectorAll(".project-video").forEach(wrapper => {
@@ -30,3 +25,13 @@ document.querySelectorAll(".project-video").forEach(wrapper => {
         }
     });
 });
+
+// ✅ Correct: select by class
+const resumeBtn = document.querySelector(".resume-btn");
+
+resumeBtn.addEventListener("click", (e) => {
+    // Optional: force download instead of opening
+    e.preventDefault();
+    window.open("./assets/CV_YenPhan.pdf", "_blank");
+});
+

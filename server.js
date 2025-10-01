@@ -1,10 +1,12 @@
 const express = require("express");
 const path = require("path");
-
+const nodemailer = require("nodemailer");
 const app = express();
 const PORT = process.env.PORT || 3000;
+require("dotenv").config();
 
-// Serve static files
+// Middleware
+app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
@@ -37,6 +39,11 @@ app.post("/send-mail", async (req, res) => {
         console.error(err);
         res.send("❌ Error sending message.");
     }
+});
+
+app.use((req, res, next) => {
+    console.log(req.method, req.url);
+    next();
 });
 
 app.listen(PORT, () => {
